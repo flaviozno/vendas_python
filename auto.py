@@ -1,6 +1,6 @@
 import pandas as pd
 
-tabela_vendas = pd.read_excel("/content/drive/MyDrive/Colab Notebooks/Vendas.xlsx")
+tabela_vendas = pd.read_excel("") #path da planilha
 
 tabela_faturamento = tabela_vendas[["ID Loja","Valor Final"]].groupby("ID Loja").sum()
 tabela_faturamento = tabela_faturamento.sort_values(by="Valor Final", ascending=False)
